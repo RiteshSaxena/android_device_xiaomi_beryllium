@@ -1,0 +1,2 @@
+add_lunch_combo reloaded_beryllium-user
+add_lunch_combo reloaded_beryllium-userdebug

@@ -4,13 +4,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit some common Reloaded stuff.
+$(call inherit-product, vendor/reloaded/common.mk)
+
 $(call inherit-product, device/xiaomi/beryllium/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_beryllium
+PRODUCT_NAME := reloaded_beryllium
 PRODUCT_DEVICE := beryllium
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Poco F1

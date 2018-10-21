@@ -1,0 +1,2 @@
+add_lunch_combo carbon_beryllium-user
+add_lunch_combo carbon_beryllium-userdebug

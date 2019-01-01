@@ -37,5 +37,8 @@ TARGET_TAP_TO_WAKE_NODE := "/dev/input/event2"
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
+# Security Patch
+PLATFORM_SECURITY_PATCH := 2019-02-01
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/beryllium/BoardConfigVendor.mk

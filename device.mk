@@ -67,3 +67,7 @@ PRODUCT_COPY_FILES += \
 # PocketMode
 PRODUCT_PACKAGES += \
     XiaomiPocketMode
+
+# ThermalController
+PRODUCT_PACKAGES += \
+    ThermalController

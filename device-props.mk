@@ -23,3 +23,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # GNSS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.overlay.izat.optin=rro
+
+# Radio 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.radio.aosp_usr_pref_sel=true

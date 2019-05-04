@@ -221,6 +221,9 @@
 
     <!-- Performance Profiles -->
     <bool name="config_hasPerformanceProfiles">true</bool>
+    
+    <!-- Notch support -->
+    <bool name="config_physicalDisplayCutout">true</bool>
 
     <!-- Default value for proximity check on screen wake
      NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->

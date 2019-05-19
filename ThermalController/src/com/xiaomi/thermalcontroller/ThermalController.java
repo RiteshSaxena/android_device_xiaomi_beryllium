@@ -26,6 +26,7 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Handler;
+import android.os.SystemProperties;
 import android.util.Log;;
 
 import com.xiaomi.thermalcontroller.util.FileUtils;
@@ -121,7 +122,8 @@ public class ThermalController {
     }
 
     private void SendThermalMessage(String mMode, String packagename) {
-        if (!(GetThermalMessage().equals(mMode))) {
+        int perfmode = SystemProperties.getInt("persist.reloaded.perfmode", 1);
+        if (perfmode == 1 && !(GetThermalMessage().equals(mMode))) {
             Log.d(TAG, "Set thermal config for foreground Change: " + packagename);
             if (FileUtils.writeLine(THERMAL_MESSAGE_PATH, mMode))
                 Log.d(TAG, "Change Thermal Mode to " + mMode + " successful");

@@ -23,6 +23,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.util.Log;;
 
@@ -39,22 +41,22 @@ public class AutoThermalConfig {
 
     private String foregroundApp;
 
+    private Context mContext;
+
     private static final String THERMAL_MESSAGE_PATH = "/sys/class/thermal/thermal_message/sconfig";
 
     // Supported Thermal Modes
+        private static final String MODE_DEFAULT = "0";
+    private static final String MODE_DIALER = "8";
     private static final String MODE_GAME = "9";
-    private static final String MODE_INCALL = "8";
-    private static final String MODE_EVALUATION = "10";
-    private static final String MODE_CLASS0 = "11";
+    private static final String MODE_PERFORMANCE = "10";
+    private static final String MODE_BROWSER = "11";
     private static final String MODE_CAMERA = "12";
     private static final String MODE_PUBG = "13";
-    private static final String MODE_YOUTUBE = "14";
-    private static final String MODE_EXTREMEPOWERSAVE = "2";
-    private static final String MODE_ARVR = "15";
-    private static final String MODE_GAME2 = "16";
-    private static final String MODE_RESTORE = "0";
+    private static final String MODE_VIDEO = "14";
 
     public AutoThermalConfig(Context context) {
+        mContext = context;
         checkActivity(context);
     }
 
@@ -62,34 +64,60 @@ public class AutoThermalConfig {
         switch (packagename) {
             case "com.android.dialer":
             case "com.google.android.dialer":
-                SendThermalMessage(MODE_INCALL, packagename);
+                SendThermalMessage(MODE_DIALER, packagename);
                 break;
             case "com.antutu.ABenchMark":
+            case "com.antutu.benchmark.full":
+            case "com.futuremark.dmandroid.application":
             case "com.primatelabs.geekbench":
-                SendThermalMessage(MODE_EVALUATION, packagename);
+                SendThermalMessage(MODE_PERFORMANCE, packagename);
                 break;
             case "org.codeaurora.snapcam":
             case "com.android.camera":
+            case "com.google.android.GoogleCamera":
+            case "com.google.android.GoogleCameraEng":
             case "com.android.gallery3d":
+            case "org.codeaurora.gallery":
             case "com.google.android.apps.photos":
                 SendThermalMessage(MODE_CAMERA, packagename);
                 break;
             case "org.lineageos.jelly":
             case "com.android.chrome":
-                SendThermalMessage(MODE_CLASS0, packagename);
+            case "com.UCMobile.intl":
+                SendThermalMessage(MODE_BROWSER, packagename);
                 break;
             case "com.tencent.ig":
                 SendThermalMessage(MODE_PUBG, packagename);
                 break;
             case "com.google.android.youtube":
-                SendThermalMessage(MODE_YOUTUBE, packagename);
-                break;
-            case "com.android.launcher3":
-                SendThermalMessage(MODE_RESTORE, packagename);
+            case "com.netflix.mediaclient":
+            case "com.google.android.videos":
+            case "com.amazon.avod.thirdpartyclient":
+            case "com.google.android.apps.youtube.kids":
+                SendThermalMessage(MODE_VIDEO, packagename);
                 break;
             default:
-                SendThermalMessage(MODE_RESTORE, packagename);
+                if (isGame(packagename) == 1) {
+                    SendThermalMessage(MODE_GAME, packagename);
+                }else{
+                    SendThermalMessage(MODE_DEFAULT, packagename);
+                }
         }
+    }
+
+    private int isGame(String packageName) {
+        int isGame = 0;
+        try {
+            PackageManager pm = mContext.getPackageManager();
+            ApplicationInfo ai = pm.getApplicationInfo(packageName, 0);
+            if (ai != null) {
+                isGame = (ai.category == ApplicationInfo.CATEGORY_GAME ||
+                    (ai.flags & ApplicationInfo.FLAG_IS_GAME) == ApplicationInfo.FLAG_IS_GAME) ? 1 : 0;
+            }
+        } catch (PackageManager.NameNotFoundException ex) {
+            // do nothing
+        }
+        return isGame;
     }
 
     private void SendThermalMessage(String mMode, String packagename) {
@@ -114,7 +142,7 @@ public class AutoThermalConfig {
     protected void removeCallback() {
         handler.removeCallbacks(activityRunnable);
         if (DEBUG) Log.d(TAG, "Removed Callbacks");
-        SendThermalMessage(MODE_RESTORE, "ScreenOff");
+        SendThermalMessage(MODE_DEFAULT, "ScreenOff");
     }
 
     private class ActivityRunnable implements Runnable {

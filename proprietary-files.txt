@@ -126,7 +126,7 @@ vendor/lib/camera/components/com.qti.stats.awbwrapper.so
 vendor/lib/camera/components/com.qti.stats.pdlib.so
 vendor/lib/camera/components/com.qti.stats.pdlibsony.so
 vendor/lib/camera/components/com.qti.stats.pdlibwrapper.so
-vendor/lib/camera/components/com.vidhance.node.eis.so
+vendor/lib/camera/components/com.vidhance.node.eis.so|ec67a079a57515a4f8f662291bed470437f38d5d
 vendor/lib/camera/components/com.xiaomi.node.mibokeh.so
 vendor/lib/camera/components/etc/GpuKernelRepo.pb
 vendor/lib/camera/components/etc/model_back.dlc

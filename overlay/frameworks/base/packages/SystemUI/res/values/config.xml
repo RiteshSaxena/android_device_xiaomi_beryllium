@@ -22,4 +22,7 @@
 <resources>
     <!-- Should "4G" be shown instead of "LTE" when the network is NETWORK_TYPE_LTE? -->
     <bool name="config_show4GForLTE">true</bool>
+
+    <!-- Show RSRP Signal level for LTE -->
+    <bool name="config_showRsrpSignalLevelforLTE">true</bool>
 </resources>

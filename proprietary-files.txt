@@ -114,7 +114,7 @@ vendor/lib/camera/components/com.qti.node.photosolid.so
 vendor/lib/camera/components/com.qti.node.remosaic.so
 vendor/lib/camera/components/com.qti.node.sr.so
 vendor/lib/camera/components/com.qti.node.swregistration.so
-vendor/lib/camera/components/com.qti.node.watermark.so
+vendor/lib/camera/components/com.qti.node.watermark.so|ed034d39c5806323adf92e07ba5f3e5e51afc91e
 vendor/lib/camera/components/com.qti.node.xiaomigenderage.so
 vendor/lib/camera/components/com.qti.stats.aec.so
 vendor/lib/camera/components/com.qti.stats.aecwrapper.so
@@ -182,6 +182,8 @@ vendor/lib/libtonemapalgo.so
 vendor/lib/libvidhance.so
 vendor/lib/libXMFD_AgeGender.so
 vendor/lib/mibokeh_845_opencl.bin
+vendor/lib/libicuuc-v28.so|b86c2cbca8285748e927dfb6552b04428392a066
+vendor/lib/libminikin-v28.so|3d41759bd0897294c60190cce483f1d58efc0396
 
 # Camera firmware
 vendor/firmware/bu64748gwz.prog

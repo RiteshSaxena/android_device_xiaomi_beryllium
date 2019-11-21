@@ -28,6 +28,9 @@ BOARD_HAVE_QCOM_FM := true
 # Kernel
 TARGET_KERNEL_CONFIG := beryllium_defconfig
 
+# Platform SPL
+PLATFORM_SECURITY_PATCH_OVERRIDE := 2019-09-01
+
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 

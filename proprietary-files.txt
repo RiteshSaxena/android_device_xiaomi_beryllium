@@ -1,4 +1,4 @@
-# ACDB
+# ACDB - from polaris - QKQ1.190828.002
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Codec_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_General_cal.acdb
@@ -15,10 +15,10 @@ vendor/lib/libacdbloader.so
 # ADSP modules
 vendor/lib/rfsa/adsp/dirac_resource.dar
 
-# Audio (speaker amplifier) firmware
+# Audio (speaker amplifier) firmware - from polaris - QKQ1.190828.002
 vendor/firmware/tas2559_uCDSP.bin
 
-# Audio (speaker amplifier) calibration
+# Audio (speaker amplifier) calibration - from polaris - QKQ1.190828.002
 vendor/etc/tas2559_l.ftcfg
 vendor/etc/tas2559_r.ftcfg
 

@@ -1,0 +1,8 @@
+# Camera
+persist.vendor.camera.perfcapture=1
+
+# Display density
+ro.sf.lcd_density=440
+
+# Performance mode
+persist.reloaded.perfmode=1

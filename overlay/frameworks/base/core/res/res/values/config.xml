@@ -241,4 +241,7 @@
 
     <!-- Performance Profiles -->
     <bool name="config_hasPerformanceProfiles">true</bool>
+
+    <!-- Notch support -->
+    <bool name="config_physicalDisplayCutout">true</bool>
 </resources>

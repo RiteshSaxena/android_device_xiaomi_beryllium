@@ -23,6 +23,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     qcom.fmradio
 
+# Enable Faceunlock
+PRODUCT_PACKAGES += \
+    FaceUnlockService
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay

@@ -47,8 +47,8 @@ public class ThermalController {
     private static final String THERMAL_MESSAGE_PATH = "/sys/class/thermal/thermal_message/sconfig";
 
     // Supported Thermal Modes
-        private static final String MODE_DEFAULT = "0";
-    private static final String MODE_DIALER = "8";
+    private static final String MODE_DEFAULT = "0";
+    private static final String MODE_CALL = "8";
     private static final String MODE_GAME = "9";
     private static final String MODE_PERFORMANCE = "10";
     private static final String MODE_BROWSER = "11";
@@ -65,7 +65,7 @@ public class ThermalController {
         switch (packagename) {
             case "com.android.dialer":
             case "com.google.android.dialer":
-                SendThermalMessage(MODE_DIALER, packagename);
+                SendThermalMessage(MODE_CALL, packagename);
                 break;
             case "com.antutu.ABenchMark":
             case "com.antutu.benchmark.full":
@@ -77,14 +77,12 @@ public class ThermalController {
             case "com.android.camera":
             case "com.google.android.GoogleCamera":
             case "com.google.android.GoogleCameraEng":
-            case "com.android.gallery3d":
-            case "org.codeaurora.gallery":
-            case "com.google.android.apps.photos":
                 SendThermalMessage(MODE_CAMERA, packagename);
                 break;
-            case "org.lineageos.jelly":
             case "com.android.chrome":
             case "com.UCMobile.intl":
+            case "com.opera.mini.native":
+            case "org.mozilla.firefox":
                 SendThermalMessage(MODE_BROWSER, packagename);
                 break;
             case "com.tencent.ig":
@@ -95,6 +93,11 @@ public class ThermalController {
             case "com.google.android.videos":
             case "com.amazon.avod.thirdpartyclient":
             case "com.google.android.apps.youtube.kids":
+            case "in.startv.hotstar":
+            case "com.mxtech.videoplayer.ad":
+            case "org.videolan.vlc":
+            case "org.codeaurora.gallery":
+            case "com.google.android.apps.photos":
                 SendThermalMessage(MODE_VIDEO, packagename);
                 break;
             default:

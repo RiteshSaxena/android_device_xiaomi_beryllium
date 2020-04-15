@@ -44,3 +44,6 @@ on property:persist.reloaded.perfmode=1
 
 on property:persist.reloaded.perfmode=2
     write /sys/class/thermal/thermal_message/sconfig 10
+
+on property:persist.reloaded.perfmode=3
+    write /sys/class/thermal/thermal_message/sconfig 0

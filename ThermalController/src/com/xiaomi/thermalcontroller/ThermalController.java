@@ -125,7 +125,7 @@ public class ThermalController {
     }
 
     private void SendThermalMessage(String mMode, String packagename) {
-        int perfmode = SystemProperties.getInt("persist.reloaded.perfmode", 1);
+        int perfmode = SystemProperties.getInt("persist.sys.reloaded.perfmode", 1);
         if (perfmode == 1 && !(GetThermalMessage().equals(mMode))) {
             Log.d(TAG, "Set thermal config for foreground Change: " + packagename);
             if (FileUtils.writeLine(THERMAL_MESSAGE_PATH, mMode))

@@ -1,5 +1,12 @@
 # Camera
 persist.vendor.camera.perfcapture=1
 
+# Display postprocessing
+persist.ppd.fde.config=0
+
+# Fingerprint
+ro.hardware.fp.fpc=true
+ro.hardware.fp.goodix=true
+
 # Performance mode
-persist.reloaded.perfmode=1
+persist.sys.reloaded.perfmode=1

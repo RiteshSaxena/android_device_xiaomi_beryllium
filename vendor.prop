@@ -6,6 +6,3 @@ vendor.hw.fm.init=0
 
 # GNSS
 persist.vendor.overlay.izat.optin=rro
-
-# Radio 
-persist.vendor.radio.aosp_usr_pref_sel=true

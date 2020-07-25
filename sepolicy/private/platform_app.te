@@ -1,0 +1,2 @@
+get_prop(platform_app, system_prop);
+set_prop(platform_app, system_prop);

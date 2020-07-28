@@ -36,14 +36,14 @@ service remosaic_daemon /vendor/bin/remosaic_daemon
     user camera
     group camera
 
-on property:persist.sys.reloaded.perfmode=0
+on property:persist.sys.reloaded.perfmode=-1
     write /sys/class/thermal/thermal_message/sconfig 2
+    
+on property:persist.sys.reloaded.perfmode=0
+    write /sys/class/thermal/thermal_message/sconfig 0
     
 on property:persist.sys.reloaded.perfmode=1
     write /sys/class/thermal/thermal_message/sconfig 0
 
 on property:persist.sys.reloaded.perfmode=2
     write /sys/class/thermal/thermal_message/sconfig 10
-
-on property:persist.sys.reloaded.perfmode=3
-    write /sys/class/thermal/thermal_message/sconfig 0

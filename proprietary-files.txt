@@ -1,4 +1,4 @@
-# ACDB - from stock - V11.0.8.0.QEJMIXM
+# ACDB - from stock - V12.0.0.3.QEJMIXM
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Codec_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_General_cal.acdb
@@ -12,17 +12,17 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/lib64/libacdbloader.so
 vendor/lib/libacdbloader.so
 
-# ADSP modules - from stock - V11.0.8.0.QEJMIXM
+# ADSP modules - from stock - V12.0.0.3.QEJMIXM
 vendor/lib/rfsa/adsp/dirac_resource.dar
 
-# Audio (speaker amplifier) firmware - from stock - V11.0.8.0.QEJMIXM
+# Audio (speaker amplifier) firmware - from stock - V12.0.0.3.QEJMIXM
 vendor/firmware/tas2559_uCDSP.bin
 
-# Audio (speaker amplifier) calibration - from stock - V11.0.8.0.QEJMIXM
+# Audio (speaker amplifier) calibration - from stock - V12.0.0.3.QEJMIXM
 vendor/etc/tas2559_l.ftcfg
 vendor/etc/tas2559_r.ftcfg
 
-# Camera - from stock - V11.0.8.0.QEJMIXM
+# Camera - from stock - V12.0.0.3.QEJMIXM
 vendor/bin/remosaic_daemon
 vendor/etc/camera/MIUI_Time.ttf
 vendor/etc/camera/Miui-Light.ttf
@@ -172,22 +172,22 @@ vendor/lib/libvidhance.so
 vendor/lib/libXMFD_AgeGender.so
 vendor/lib/mibokeh_845_opencl.bin
 
-# Camera firmware - from stock - V11.0.8.0.QEJMIXM
+# Camera firmware - from stock - V12.0.0.3.QEJMIXM
 vendor/firmware/bu64748gwz.prog
 vendor/firmware/CAMERA_ICP.elf
 
-# Display configs - from stock - V11.0.8.0.QEJMIXM
+# Display configs - from stock - V12.0.0.3.QEJMIXM
 vendor/etc/hdr_config.cfg
 vendor/etc/sdr_config.cfg
 
-# Fingerprint - from stock - V11.0.8.0.QEJMIXM
+# Fingerprint - from stock - V12.0.0.3.QEJMIXM
 vendor/lib64/hw/fingerprint.fpc.so
 vendor/lib64/hw/fingerprint.goodix.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/vendor.goodix.hardware.fingerprintextension@1.0.so
 
-# FM - from stock - V11.0.8.0.QEJMIXM
+# FM - from stock - V12.0.0.3.QEJMIXM
 system/lib/fm_helium.so
 system/lib/libfm-hci.so
 system/lib64/fm_helium.so
@@ -199,7 +199,7 @@ vendor/lib/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
-# GNSS - from stock - V11.0.8.0.QEJMIXM
+# GNSS - from stock - V12.0.0.3.QEJMIXM
 system/etc/permissions/com.qti.location.sdk.xml
 system/etc/permissions/com.qualcomm.location.xml
 system/etc/permissions/izat.xt.srv.xml
@@ -309,11 +309,11 @@ vendor/lib/vendor.qti.gnss@3.0.so
 vendor/lib/vendor.qti.gnss@3.0-service.so
 vendor/lib/vendor.qti.hardware.cacert@1.0.so
 
-# Hotword enrollment - from stock - V11.0.8.0.QEJMIXM
+# Hotword enrollment - from stock - V12.0.0.3.QEJMIXM
 -product/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk;PRESIGNED
 -product/priv-app/HotwordEnrollmentXGoogleWCD9340/HotwordEnrollmentXGoogleWCD9340.apk;PRESIGNED
 
-# Keymaster - from stock - V11.0.8.0.QEJMIXM
+# Keymaster - from stock - V12.0.0.3.QEJMIXM
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
 vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
@@ -325,21 +325,21 @@ vendor/lib/libkeymasterdeviceutils.so
 vendor/lib/libkeymasterprovision.so
 vendor/lib/libkeymasterutils.so
 
-# QDCM calibration data - from stock - V11.0.8.0.QEJMIXM
+# QDCM calibration data - from stock - V12.0.0.3.QEJMIXM
 vendor/etc/qdcm_calib_data_ebbg_fhd_video_dsi_panel.xml
 vendor/etc/qdcm_calib_data_tianma_fhd_video_dsi_panel.xml
 
-# Snapdragon Computer Vision Engine - from stock - V11.0.8.0.QEJMIXM
+# Snapdragon Computer Vision Engine - from stock - V12.0.0.3.QEJMIXM
 vendor/lib64/libscveFaceLandmarks.so
 vendor/lib64/libscveFaceRecognition.so
 vendor/lib/libscveFaceLandmarks.so
 vendor/lib/libscveFaceRecognition.so
 
-# Sensors - from stock - V11.0.8.0.QEJMIXM
+# Sensors - from stock - V12.0.0.3.QEJMIXM
 vendor/lib64/sensors.ssc.so
 vendor/lib/sensors.ssc.so
 
-# Sensors configs - from stock - V11.0.8.0.QEJMIXM
+# Sensors configs - from stock - V12.0.0.3.QEJMIXM
 vendor/etc/sensors/config/adux1050_0.json
 vendor/etc/sensors/config/ak991x_dri_0.json
 vendor/etc/sensors/config/bmi160_0.json
@@ -372,7 +372,7 @@ vendor/etc/sensors/config/tmd2725.json
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 
-# Thermal configs - from stock - V11.0.8.0.QEJMIXM
+# Thermal configs - from stock - V12.0.0.3.QEJMIXM
 vendor/etc/thermal-engine-sdm845-arvr.conf
 vendor/etc/thermal-engine-sdm845-camera.conf
 vendor/etc/thermal-engine-sdm845-class0.conf
@@ -386,12 +386,12 @@ vendor/etc/thermal-engine-sdm845-tgame.conf
 vendor/etc/thermal-engine-sdm845.conf
 vendor/etc/thermal-engine.conf
 
-# Widevine DRM L1 support - from stock - V11.0.8.0.QEJMIXM
+# Widevine DRM L1 support - from stock - V12.0.0.3.QEJMIXM
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libwvkeybox.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libwvkeybox.so
 
-# WiFi - from stock - V11.0.8.0.QEJMIXM
+# WiFi - from stock - V12.0.0.3.QEJMIXM
 vendor/lib64/vendor.qti.hardware.wifi.keystore@1.0.so

@@ -15,17 +15,17 @@ TARGET_SCREEN_HEIGHT := 2246
 TARGET_SCREEN_WIDTH := 1080
 
 # FM
-PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    qcom.fmradio
+#PRODUCT_PACKAGES += \
+#    FM2 \
+#    libqcomfm_jni \
+#    qcom.fmradio
 
-PRODUCT_BOOT_JARS += \
-    qcom.fmradio
+#PRODUCT_BOOT_JARS += \
+#    qcom.fmradio
 
 # Enable Faceunlock
-PRODUCT_PACKAGES += \
-    FaceUnlockService
+#PRODUCT_PACKAGES += \
+#    FaceUnlockService
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
